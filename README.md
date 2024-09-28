@@ -19,4 +19,6 @@ ssh-keygen
 sudo dnf install openssh-server
 
 sudo systemctl enable --now sshd
+
+mkdir ~/.ssh/authorized_keys ; cat id_*.pub > authorized_keys
 ```
