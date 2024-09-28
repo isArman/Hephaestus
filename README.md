@@ -20,3 +20,7 @@ sudo dnf install openssh-server
 sudo systemctl enable --now sshd
 mkdir ~/.ssh/authorized_keys ; cat id_*.pub > authorized_keys
 ```
+# Quick Start:
+```
+ansible-playbook -i ./inventory ./playbook1.yml --ask-become-pass
+```
