@@ -6,3 +6,5 @@ An Ansible playbook to automate the setup of Fedora, inspired by Hephaestus, the
    ```
    sudo dnf install ansible -y
    ```
+2. Change default repository (Optional, recommended for Iranian users):
+   sudo wget -O etc/yum.repos.dt/iutfedora.repo http://repo.iut.ac.ir/repo/iutfedora.repo
