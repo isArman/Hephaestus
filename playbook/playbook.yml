@@ -1,0 +1,33 @@
+---
+- name: Install packages
+  hosts: fedora_machines
+  become: yes
+  tasks:
+    - name: Install Vim
+      dnf:
+        name: vim
+        state: present
+
+    - name: Install Transmission
+      dnf:
+        name: transmission
+        state: present
+
+    - name: Install Zsh
+      dnf:
+        name: zsh
+        state: present
+    - name: Download oh-my-zsh script
+      get_url:
+        url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+        dest: /tmp/install.sh
+
+    - name: Make install.sh executable
+      file:
+        path: /tmp/install.sh
+        mode: '755'
+
+    - name: Run the Oh My Zsh install script
+      shell: sh /tmp/install.sh
+      args:
+        executable: /bin/bash

@@ -1,0 +1,2 @@
+[fedora_machines]
+machine1 ansible_host=192.168.1.54 ansible_user=arman
