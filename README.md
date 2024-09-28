@@ -9,12 +9,13 @@ An Ansible playbook to automate the setup of Fedora, inspired by Hephaestus, the
 2. Change default repository (Optional, recommended for Iranian users):
    ```
    sudo wget -O etc/yum.repos.dt/iutfedora.repo http://repo.iut.ac.ir/repo/iutfedora.repo
-```
+   ```
+
 3. Add localhost ssh key to use ansible:
-```
+   ```
 ssh-keygen
 
 sudo dnf install openssh-server
 
 sudo systemctl enable --now sshd
-```
+   ```
