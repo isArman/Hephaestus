@@ -12,3 +12,7 @@ An Ansible playbook to automate the setup of Fedora, inspired by Hephaestus, the
    ```
 
 3. Add localhost ssh key to use ansible:
+
+```
+ssh-keygen
+```
