@@ -5,6 +5,7 @@ An Ansible playbook to automate the setup of Fedora, inspired by Hephaestus, the
 1. Install ansible:
    ```
    sudo dnf install ansible -y
+   sudo dnf install ansible-core -y
    ```
 2. Change default repository (Optional, recommended for Iranian users):
    ```
