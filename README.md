@@ -15,4 +15,8 @@ An Ansible playbook to automate the setup of Fedora, inspired by Hephaestus, the
 
 ```
 ssh-keygen
+
+sudo dnf install openssh-server
+
+sudo systemctl enable --now sshd
 ```
