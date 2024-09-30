@@ -1,17 +1,15 @@
 #!/bin/bash
 
-sudo dnf upgrade -y --refresh
-
 # Change the default repository to iutfedora repository to bypass restrictions.
 sudo sed -i 's/enabled=1/enabled=0/g' "/etc/yum.repos.d/"/*
 sudo cp ./iutfedora.repo /etc/yum.repos.d/.
-sudo dnf update -y
+sudo dnf upgrade -y
 
 # Modify the default network status endpoint to bypass access issues from Iran.
 sudo cp ./90-connectivity.conf /etc/NetworkManager/conf.d/.
 
 # Install some packages there are in dnf repository
-sudo dnf install vim zsh docker transmission
+sudo dnf install vim zsh docker transmission -y
 
 # enable docker
 sudo systemctl enable --now docker.service
