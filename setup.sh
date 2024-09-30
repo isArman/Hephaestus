@@ -40,10 +40,6 @@ sudo docker run -d \
   mzz2017/v2raya
 echo -e "${GREEN}v2rayA is accessible at http://localhost:2017 .${NC}"
 
-# Setup oh-my-zsh! (a delightful, open source, community-driven framework for managing your Zsh configuration)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo -e "${GREEN}oh-my-zsh set up successfully.${NC}"
-
 # Install Telegram
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -56,3 +52,8 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 sudo dnf check-update
 sudo dnf install code # or code-insiders
 echo -e "${GREEN}vscode installation completed successfully.${NC}"
+
+# Setup oh-my-zsh! (a delightful, open source, community-driven framework for managing your Zsh configuration)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo -e "${GREEN}oh-my-zsh set up successfully.${NC}"
+
