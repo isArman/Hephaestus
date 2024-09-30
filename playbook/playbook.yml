@@ -1,5 +1,5 @@
 ---
-- name: Install packages
+- name: Install packages and download file
   hosts: fedora_machines
   become: yes
   tasks:
@@ -17,17 +17,12 @@
       dnf:
         name: zsh
         state: present
-    - name: Download oh-my-zsh script
-      get_url:
+
+    - name: Download zsh-installer
+      ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-        dest: /tmp/install.sh
-
-    - name: Make install.sh executable
-      file:
-        path: /tmp/install.sh
-        mode: '755'
-
-    - name: Run the Oh My Zsh install script
-      shell: sh /tmp/install.sh
-      args:
-        executable: /bin/bash
+        dest: /etc/install.sh
+        mode: '0755'
+    
+    - name: Execute install.sh
+      ansible.builtin.command: /etc/install.sh
