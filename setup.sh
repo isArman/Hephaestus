@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo dnf upgrade -y --refresh
+
 # Change the default repository to iutfedora repository to bypass restrictions.
 sudo sed -i 's/enabled=1/enabled=0/g' "/etc/yum.repos.d/"/*
 sudo cp ./iutfedora.repo /etc/yum.repos.d/.
@@ -33,4 +35,9 @@ sudo docker run -d \
 
 # Setup oh-my-zsh! (a delightful, open source, community-driven framework for managing your Zsh configuration)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install Telegram
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install telegram
 
