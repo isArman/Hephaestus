@@ -3,7 +3,9 @@
 GREEN='\033[0;32m'
 
 # Change the default repository to iutfedora repository to bypass restrictions.
-sudo rm /etc/yum.repos.d/iutfedora.repo
+if [ -f /etc/yum.repos.d/iutfedora.repo ]; then
+    sudo rm /etc/yum.repos.d/iutfedora.repo
+fi
 sudo sed -i 's/enabled=1/enabled=0/g' "/etc/yum.repos.d/"/*
 sudo cp ./iutfedora.repo /etc/yum.repos.d/.
 sudo dnf upgrade -y
