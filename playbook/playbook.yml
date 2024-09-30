@@ -30,7 +30,7 @@
     - name: Execute downloaded file with expected input
       become: no
       expect:
-        command: /etc/tmp/file.txt
+        command: ~/install-oh-my-zsh.sh
         responses:
           'Do you want to continue?': 'y'
           'Password:': ' '
