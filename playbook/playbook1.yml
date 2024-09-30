@@ -1,6 +1,0 @@
----
-- name: Install packages and download file
-  hosts: fedora_machines
-  tasks:
-    - name: Execute install.sh
-      ansible.builtin.command: /etc/install.sh
