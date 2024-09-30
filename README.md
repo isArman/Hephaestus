@@ -18,9 +18,9 @@ An Ansible playbook to automate the setup of Fedora, inspired by Hephaestus, the
 ssh-keygen
 sudo dnf install openssh-server
 sudo systemctl enable --now sshd
-mkdir ~/.ssh/authorized_keys ; cat id_*.pub > authorized_keys
+touch ~/.ssh/authorized_keys ; cat id_*.pub > authorized_keys
 ```
 # Quick Start:
 ```
-ansible-playbook -i ./inventory ./playbook1.yml --ask-become-pass
+ansible-playbook -i ./inventory ./playbook.yml --ask-become-pass
 ```
