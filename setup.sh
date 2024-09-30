@@ -31,3 +31,6 @@ sudo docker run -d \
   -v /etc/v2raya:/etc/v2raya \
   mzz2017/v2raya
 
+# Setup oh-my-zsh! (a delightful, open source, community-driven framework for managing your Zsh configuration)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
