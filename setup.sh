@@ -7,13 +7,13 @@ if [ -f /etc/yum.repos.d/iutfedora.repo ]; then
     sudo rm /etc/yum.repos.d/iutfedora.repo
 fi
 sudo sed -i 's/enabled=1/enabled=0/g' "/etc/yum.repos.d/"/*
-sudo cp ./iutfedora.repo /etc/yum.repos.d/.
+sudo cp ./conf/iutfedora.repo /etc/yum.repos.d/.
 sudo dnf upgrade -y
 
 echo -e "${GREEN}Default repository changed successfully.${NC}"
 
 # Modify the default network status endpoint to bypass access issues from Iran.
-sudo cp ./90-connectivity.conf /etc/NetworkManager/conf.d/.
+sudo cp ./conf/90-connectivity.conf /etc/NetworkManager/conf.d/.
 echo -e "${GREEN}Default network status endpoint changed successfully.${NC}"
 
 # Install some packages there are in dnf repository
