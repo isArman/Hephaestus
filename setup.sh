@@ -17,7 +17,7 @@ sudo cp ./90-connectivity.conf /etc/NetworkManager/conf.d/.
 echo -e "${GREEN}Default network status endpoint changed successfully.${NC}"
 
 # Install some packages there are in dnf repository
-sudo dnf install vim zsh docker transmission -y
+sudo dnf install vim zsh docker transmission okular -y
 echo -e "${GREEN}Packages installed successfully.${NC}"
 
 # enable docker
@@ -51,8 +51,8 @@ echo -e "${GREEN}Telegram installation completed successfully.${NC}"
 # Install vscode
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
-sudo dnf check-update
-sudo dnf install code # or code-insiders
+sudo dnf check-update -y
+sudo dnf install code -y # or code-insiders
 echo -e "${GREEN}vscode installation completed successfully.${NC}"
 
 # Setup oh-my-zsh! (a delightful, open source, community-driven framework for managing your Zsh configuration)
