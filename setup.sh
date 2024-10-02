@@ -25,8 +25,8 @@ sudo systemctl enable --now docker.service
 echo -e "${GREEN}Docker service enabled successfully.${NC}"
 
 # Install v2rayA using docker (It's accesible in localhost:2017)
-sudo docker pull docker.arvancloud.ir/mzz2017/v2raya
-sudo docker tag docker.arvancloud.ir/mzz2017/v2raya mzz2017/v2raya
+sudo docker pull focker.ir/mzz2017/v2raya
+sudo docker tag focker.ir/mzz2017/v2raya mzz2017/v2raya
 sudo docker run -d \
   --restart=always \
   --privileged \
