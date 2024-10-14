@@ -20,6 +20,11 @@ echo -e "${GREEN}Default network status endpoint changed successfully.${NC}"
 sudo dnf install vim zsh docker transmission okular vlc vlc-cli gcc-go golang-bin -y
 echo -e "${GREEN}Packages installed successfully.${NC}"
 
+# Install movie deacoder:
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
+dnf install gstreamer1-devel gstreamer1-plugins-base-tools gstreamer1-doc gstreamer1-plugins-base-devel gstreamer1-plugins-good gstreamer1-plugins-good-extras gstreamer1-plugins-ugly-free gstreamer1-plugins-bad-free gstreamer1-plugins-bad-free-devel gstreamer1-plugins-bad-free-extras
+
 # enable docker
 sudo systemctl enable --now docker.service
 echo -e "${GREEN}Docker service enabled successfully.${NC}"
