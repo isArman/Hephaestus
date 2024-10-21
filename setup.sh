@@ -17,7 +17,7 @@ sudo cp ./conf/90-connectivity.conf /etc/NetworkManager/conf.d/.
 echo -e "${GREEN}Default network status endpoint changed successfully.${NC}"
 
 # Install some packages there are in dnf repository
-sudo dnf install vim zsh docker transmission okular vlc vlc-cli gcc-go golang-bin unzip -y
+sudo dnf install vim zsh docker transmission okular vlc vlc-cli gcc-go golang-bin unzip yarnpkg -y
 echo -e "${GREEN}Packages installed successfully.${NC}"
 
 # Install movie deacoder:
