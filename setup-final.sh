@@ -20,7 +20,7 @@ sudo dnf install dnf-utils -y
 sudo dnf install vim zsh transmission okular -y
 sudo dnf install gcc-go golang-bin -y
 sudo dnf install unzip -y
-sudo dnf install vlc vlc-cli ffmpeg -y
+sudo dnf install vlc vlc-cli ffmpeg-free -y
 sudo dnf install docker -y
 echo -e "${GREEN}3. All of requested packages has been installed.${NC}"
 
