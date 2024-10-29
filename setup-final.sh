@@ -16,7 +16,7 @@ sudo cp ./conf/90-connectivity.conf /etc/NetworkManager/conf.d/.
 echo -e "${GREEN}2. Default network status endpoint changed successfully.${NC}"
 
 # Download nececary packages
-sudo dnf install dnf-utils vim zsh docker transmission okular vlc vlc-cli gcc-go golang-bin unzip ffpmeg -y
+sudo dnf install dnf-utils vim zsh docker transmission okular vlc vlc-cli gcc-go golang-bin unzip ffmpeg -y
 echo -e "${GREEN}3. All of requested packages has been installed.${NC}"
 
 # Enable docker
