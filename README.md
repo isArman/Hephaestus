@@ -15,7 +15,7 @@ Oh-My-Zsh Setup: Configures the robust Oh-My-Zsh framework for managing your Zsh
 Fedora 40: Tested and optimized for the latest version of Fedora.
 Internet Access: Required for initial setup and package installations.
 
-# Usage:
+# Usage
 1. Clone the Hephaestus repository:
 ```
 git clone https://github.com/isArman/Hephaestus.git

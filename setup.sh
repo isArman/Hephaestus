@@ -62,3 +62,6 @@ echo -e "${GREEN}7. vscode installation completed successfully.${NC}"
 # Setup oh-my-zsh! (a delightful, open source, community-driven framework for managing your Zsh configuration)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo -e "${GREEN}oh-my-zsh set up successfully.${NC}"
+
+# Upgrade system
+sudo dnf upgrade -y
