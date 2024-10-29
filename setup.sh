@@ -9,7 +9,7 @@ fi
 sudo sed -i 's/enabled=1/enabled=0/g' "/etc/yum.repos.d/"/*
 sudo cp ./conf/iutfedora.repo /etc/yum.repos.d/.
 sudo dnf upgrade -y
-
+  
 echo -e "${GREEN}Default repository changed successfully.${NC}"
 
 # Modify the default network status endpoint to bypass access issues from Iran.
@@ -17,7 +17,7 @@ sudo cp ./conf/90-connectivity.conf /etc/NetworkManager/conf.d/.
 echo -e "${GREEN}Default network status endpoint changed successfully.${NC}"
 
 # Install some packages there are in dnf repository
-sudo dnf install vim zsh docker transmission okular vlc vlc-cli gcc-go golang-bin unzip yarnpkg -y
+sudo dnf install vim zsh docker transmission okular vlc vlc-cli gcc-go golang-bin unzip ffpmeg -y
 echo -e "${GREEN}Packages installed successfully.${NC}"
 
 # Install movie deacoder:
@@ -27,7 +27,7 @@ dnf install gstreamer1-devel gstreamer1-plugins-base-tools gstreamer1-doc gstrea
 
 # enable docker
 sudo systemctl enable --now docker.service
-echo -e "${GREEN}Docker service enabled successfully.${NC}"
+echo -e "${GREEN}Docker service enabled successfully.${NC}" 
 
 # Install v2rayA using docker (It's accesible in localhost:2017)
 sudo docker pull focker.ir/mzz2017/v2raya
